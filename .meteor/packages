@@ -20,3 +20,6 @@ insecure                # Allow all DB writes from clients (for prototyping)
 iron:router
 standard-minifier-css
 standard-minifier-js
+twbs:bootstrap
+accounts-password
+accounts-base
