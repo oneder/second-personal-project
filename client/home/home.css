@@ -11,3 +11,18 @@
 .welcome {
 	margin-top: 18vh;
 }
+
+.pulse {
+	animation: pulse 3s ease infinite;
+}
+@keyframes pulse {
+	0% {
+		font-size: 12em;
+	}
+	50% {
+		font-size: 13em;
+	}
+	100% {
+		font-size: 12em;
+	}
+}

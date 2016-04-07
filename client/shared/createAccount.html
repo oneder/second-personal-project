@@ -1,0 +1,39 @@
+<template name="createAccount">
+	<div class="row">
+		<div class="col-xs-4 col-xs-offset-4 text-center">
+			<form>
+				<fieldset>
+					<div class="form-group">
+						<label class="sr-only" for="new-email">Email</label>
+						<input type="email" class="form-control" id="new-email" placeholder="Email">
+					</div>
+				</fieldset>
+				<fieldset>
+					<div class="form-group">
+						<label class="sr-only" for="new-username">Username</label>
+						<input type="text" class="form-control" id="new-username" placeholder="Username">
+					</div>
+					<div class="form-group">
+						<label class="sr-only" for="new-password">Password</label>
+						<input type="password" class="form-control" id="new-password" placeholder="Password">
+					</div>
+					<div class="form-group">
+						<label class="sr-only" for="confirm-password">Confirm Password</label>
+						<input type="password" class="form-control" id="confirm-password" placeholder="Confirm Password">
+					</div>
+				</fieldset>
+				<fieldset>
+					<div class="form-group form-inline">
+						<button id="createAccount-btn" type="submit" class="btn btn-primary">Create Account</button>
+						<button id="cancel-btn" type="submit" class="btn btn-default">Cancel</button>
+					</div>
+				</fieldset>
+				<fieldset>
+					<div class="form-group">
+						<span class="sub-text">Have an account? <a id="backToSignIn" class="common-link" href="#">Sign In!</a></span>
+					</div>
+				</fieldset>
+			</form>
+		</div>
+	</div>
+</template>

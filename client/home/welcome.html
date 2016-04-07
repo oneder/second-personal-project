@@ -1,0 +1,30 @@
+<template name="welcome">
+	<div class="row">
+		<div class="col-xs-3 col-xs-offset-3 col-sm-2 col-sm-offset-4 col-md-1 col-md-offset-5 text-center">
+			<button type="button" class="btn btn-default btn-md btn-block" id="listen-btn">Listen</button>
+		</div>
+		<div class="col-xs-3 col-sm-2 col-md-1 text-center">
+			<button type="button" class="btn btn-default btn-md btn-block" id="create-btn">Create</button>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12 text-center">
+			<p>
+				<span class="general-text">
+					{{#if currentUser}}
+						Hello, {{userName}}!
+					{{else}}
+						You are a guest.
+					{{/if}}
+				</span><br>
+				<span class="sub-text">
+					{{#if currentUser}}
+						<a id="user-signout" class="common-link" href="#">Sign Out</a>
+					{{else}}
+						Want an account? <a id="toggleSignIn" class="common-link" href="#">Sign in!</a>
+					{{/if}}
+				</span>
+			</p>
+		</div>
+	</div>
+</template>

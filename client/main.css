@@ -3,3 +3,16 @@ body {
 	font-family: verdana;
 	color: #E5D78E;
 }
+
+.common-link:link {
+	color: #669999;
+	text-decoration: none;
+}
+.common-link:visited {
+	color: #669999;
+	text-decoration: none;
+}
+.common-link:hover {
+	color: white;
+	text-decoration: none;
+}

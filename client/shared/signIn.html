@@ -1,0 +1,29 @@
+<template name="signIn">
+	<div class="row">
+		<div class="col-xs-4 col-xs-offset-4 text-center">
+			<form>
+				<fieldset>
+					<div class="form-group">
+						<label class="sr-only" for="username-text">Username</label>
+						<input type="text" class="form-control" id="username-text" placeholder="Username">
+					</div>
+					<div class="form-group">
+						<label class="sr-only" for="password-text">Password</label>
+						<input type="password" class="form-control" id="password-text" placeholder="Password">
+					</div>
+				</fieldset>
+				<fieldset>
+					<div class="form-group form-inline">
+						<button id="signIn-btn" type="submit" class="btn btn-primary">Sign In</button>
+						<button id="cancel-btn" type="submit" class="btn btn-default">Cancel</button>
+					</div>
+				</fieldset>
+				<fieldset>
+					<div class="form-group">
+						<span class="sub-text">Don't have an account? <a id="toggleCreateUser" class="common-link" href="#">Create one!</a></span>
+					</div>
+				</fieldset>
+			</form>
+		</div>
+	</div>
+</template>
