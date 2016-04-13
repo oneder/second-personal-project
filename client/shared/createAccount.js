@@ -39,12 +39,21 @@ Template.createAccount.events({
 				username: username,
 				password: password,
 				profile: {
-					sounds: ['cow', 'drum', 'ham'],
-					vibes: 50
+					sounds: ['synth', 'drum', 'bass', 'cow', 'other'],
+					vibes: 50,
+					image: "/img/pulse-default.png"
 				}
+			}, function (error){
+					if(error){
+						// Could not create user
+					}
+					else{
+						Router.go('userPage', {username: username});
+						Session.set('showSignIn', false);
+						Session.set('showUserForm', false);
+						Session.set('showCreateAccount', false);
+					}
 			});
-
-			
 		}
 	}
 });

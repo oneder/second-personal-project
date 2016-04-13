@@ -16,3 +16,39 @@ body {
 	color: white;
 	text-decoration: none;
 }
+
+.disguised-link:link {
+	color: #E5D78E;
+	text-decoration: none;
+}
+.disguised-link:visited {
+	color: #E5D78E;
+	text-decoration: none;
+}
+.disguised-link:hover {
+	color: white;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.profile-image {
+	width: 38%;
+}
+.profile-name {
+	font-size: 3em;
+}
+
+.valign {
+	display: inline-block;
+	vertical-align: middle;
+	float: none;
+}
+
+.vibe-amount {
+	font-style: italic;
+	font-size: 2.2em;
+}
+.vibe-icon-sm {
+	width: 24px;
+	margin: 0 5px;
+}

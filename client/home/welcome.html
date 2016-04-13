@@ -12,7 +12,7 @@
 			<p>
 				<span class="general-text">
 					{{#if currentUser}}
-						Hello, {{userName}}!
+						Hello, <span class="disguised-link" id="user-display">{{userName}}</span>!
 					{{else}}
 						You are a guest.
 					{{/if}}

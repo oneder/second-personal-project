@@ -1,0 +1,16 @@
+<template name="userPage">
+	{{> navbar}}
+	<div class="container">
+		<div class="row page-style">
+			<div class="col-xs-12 text-center">
+				<img class="profile-image" src="{{profilePicture}}" alt="{{userName}}'s Profile Picture">
+			</div>
+			<div class="col-xs-12 text-center">
+				<span class="profile-name">{{userName}}</span>
+			</div>
+			<div class="col-xs-12 text-center">
+				<span class="valign vibe-amount">{{vibes}}</span><img class="valign vibe-icon-sm" src="/img/vibe-icon.png" alt="Vibes">
+			</div>
+		</div>
+	</div>
+</template>

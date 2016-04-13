@@ -17,6 +17,12 @@ Template.signIn.events({
 			if(error){
 				// Login failed
 			}
+			else{
+				Router.go('userPage', {username: username});
+				Session.set('showSignIn', false);
+				Session.set('showUserForm', false);
+				Session.set('showCreateAccount', false);
+			}
 		});
 	},
 

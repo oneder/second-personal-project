@@ -18,15 +18,9 @@ Template.home.helpers({
 
 Template.home.events({
 	"click #listen-btn": function (e) {
-		if(Meteor.user())
-			window.location.replace("/poopy");
-		else
-			window.location.replace("/room");
+		Router.go('listen');
 	},
 	"click #create-btn": function (e) {
-		if(Meteor.user())
-			window.location.replace("/room");
-		else
-			console.log("SQG");
+		Router.go('create');
 	}
 });
