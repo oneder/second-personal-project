@@ -1,20 +1,14 @@
-var canvas, ccontext, scontext, tool, gain, mdown, df;
+var canvas, ccontext, width, height, scontext, tool, gain, mdown, df;
 
 Template.room.rendered = function init () {
-	// Set Canvas
-	canvas = document.getElementById('soundBoard');
-	ccontext = canvas.getContext('2d');
-
-	canvas.addEventListener("mousedown", play);
-	canvas.addEventListener("mouseup", pause);
-	canvas.addEventListener("mousemove", changeFreq);
+	setCanvas();
 
 	// Set Audio
 	scontext = new AudioContext();
 	tool = scontext.createOscillator();
 
 	tool.type = "sine";
-	tool.frequency.value = 440;
+	tool.frequency.value = Notes.c.c5.value;
 	df = 5;
 
 	gain = scontext.createGain();
@@ -25,21 +19,33 @@ Template.room.rendered = function init () {
 	tool.start(0);
 }
 
+function setCanvas() {
+	// Set Canvas
+	canvas = document.getElementById('soundBoard');
+	width = canvas.width;
+	height = canvas.height;
+	ccontext = canvas.getContext('2d');
+
+	// Add listeners
+	canvas.addEventListener("mousedown", play);
+	canvas.addEventListener("mouseup", pause);
+	//canvas.addEventListener("mousemove", changeFreq);
+}
+
+// Event handlers
 function play (e) {
 	gain.gain.value = 1;
-	down = true;
+	mdown = true;
 }
-
 function pause (e) {
 	gain.gain.value = 0;
-	down = false;
+	mdown = false;
 }
-
-function changeFreq (e) {
-	if(down){
+/*function changeFreq (e) {
+	if(mdown){
 		if(tool.frequency.value >= 880 || tool.frequency.value <= 220)
 			df *= -1;
 
 		tool.frequency.value += df;
 	}
-}
+}*/
