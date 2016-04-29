@@ -1,0 +1,37 @@
+<template name="createCustom">
+	{{> navbar}}
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 text-center">
+				<h1>Create a Custom Room</h1>
+				<div class="custom-box">
+					<form>
+						<fieldset>
+							<div class="form-group">
+								<label for="inputName" class="col-xs-2 col-xs-offset-2">Name</label>
+                <div class="col-sm-6">
+                  <input id="inputName" type="text" class="form-control">
+				        </div>
+				      </div>
+	            <div class="form-group">
+                <label for="inputCapacity" class="col-xs-2 col-xs-offset-2">Capacity</label>
+                <div class="col-sm-2">
+                  <input id="inputCapacity" type="text" class="form-control">
+                  <span class="question glyphicon glyphicon-question-sign" data-toggle="popover" data-trigger="hover" data-content="Note: Max. of 4!" data-placement="bottom" aria-hidden="true"></span>
+                </div>
+	            </div>
+						</fieldset>
+						<fieldset>
+							<div class="custom-regions col-xs-12">
+								<!-- Custom Sound Board -->
+							</div>
+						</fieldset>
+						<fieldset>
+							<button id="createBtn" class="btn btn-default" type="submit">Create</button>
+						</fieldset>
+					</form>
+				</div>
+			</div>	
+		</div>
+	</div>
+</template>

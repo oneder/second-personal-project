@@ -52,3 +52,48 @@ body {
 	width: 24px;
 	margin: 0 5px;
 }
+
+.question {
+	font-size: 1.4em;
+	float: left;
+	display: inline-block;
+}
+.question:hover {
+	color: #2B4C4C;
+	cursor: pointer;
+}
+
+.popover-content {
+	color: black;
+}
+
+.custom-regions {
+	min-height: 30vh;
+}
+
+.custom-box {
+	width: 80%;
+	min-height: 45vh;
+	border: 4px solid #E5D78E;
+	background-color: #669999;
+	margin: 40px auto;
+	padding: 20px 10px;
+}
+
+.display-box {
+	width: 80%;
+	min-height: 45vh;
+	border: 4px solid #E5D78E;
+	background-color: #669999;
+	margin: 0 auto;
+	overflow-x: hidden; 
+	overflow-y: scroll;
+}
+
+.available-name {
+
+}
+
+.available-capacity {
+	
+}

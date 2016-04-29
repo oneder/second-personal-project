@@ -4,6 +4,9 @@ Meteor.publish('users', function () {
 	}
 });
 
-Meteor.publish('rooms', function () {
-	return Rooms.find();
-});
+globals = function () {
+	let set = {
+		regions: 8
+	}
+	return set;
+}

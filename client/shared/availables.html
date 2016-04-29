@@ -1,10 +1,14 @@
 <template name="availables">
 	<div class="list-group">
-		<a href="#" class="list-group-item">
-			Room name - <span>0/4</span>
-		</a>
-		<a href="#" class="list-group-item">
-			Other name - <span>2/4</span>
-		</a>
+		{{#each rooms}}
+			{{> availableRoom}}
+		{{/each}}
 	</div>	
+</template>
+
+<template name="availableRoom">
+	<a href="/room/{{_id}}" class="list-group-item">
+		<span class="available-name">{{name}}</span>
+		<span class="available-capacity">{{weight}}/{{capacity}}</span>
+	</a>
 </template>
