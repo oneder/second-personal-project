@@ -17,11 +17,15 @@
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 					{{#if currentUser}}
-						<li class="active"><a href="{{profileLink}}">Profile</a></li>
-						<li><a id="user-signout" href="#">Sign Out</a></li>
+						{{#if isGuest}}
+							<li><a href="#">Create Account</a></li>
+							<li><a href="#">Login</a></li>
+						{{else}}
+							<li class="active"><a href="{{profileLink}}">Profile</a></li>
+							<li><a id="user-signout" href="#">Sign Out</a></li>
+						{{/if}}
 					{{else}}
-						<li><a href="#">Create Account</a></li>
-						<li><a href="#">Login</a></li>
+						Loading...
 					{{/if}}
 				</ul>
 			</div>

@@ -6,6 +6,9 @@ Template.navbar.helpers({
 	'profileLink': function () {
 		let user = Meteor.users.findOne().username;
 		return "/user/" + user;
+	},
+	'isGuest': function () {
+		return Meteor.user() ? Meteor.user().profile.guest : null;
 	}
 });
 

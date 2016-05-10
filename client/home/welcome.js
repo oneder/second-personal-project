@@ -10,7 +10,7 @@ Template.welcome.helpers({
 		return Meteor.user()._id;
 	},
 	'isGuest': function () {
-		return Meteor.user().profile.guest;
+		return Meteor.user() ? Meteor.user().profile.guest : null;
 	}
 });
 
