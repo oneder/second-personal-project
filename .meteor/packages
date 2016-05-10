@@ -21,3 +21,5 @@ standard-minifier-js
 twbs:bootstrap
 accounts-password
 accounts-base
+artwells:accounts-guest
+accounts-ui

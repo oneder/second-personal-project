@@ -4,7 +4,13 @@ Template.welcome.onCreated(function() {
 
 Template.welcome.helpers({
 	'userName': function () {
-		return Meteor.users.findOne().username;
+		return Meteor.user().username;
+	},
+	'guestId': function () {
+		return Meteor.user()._id;
+	},
+	'isGuest': function () {
+		return Meteor.user().profile.guest;
 	}
 });
 

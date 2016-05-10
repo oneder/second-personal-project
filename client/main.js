@@ -1,3 +1,6 @@
+Meteor.startup(function () {
+});
+
 function setCurrentActiveMenu() {
     var pathname = window.location.pathname;
     $('.active').removeClass('active');

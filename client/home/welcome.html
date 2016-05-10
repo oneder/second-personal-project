@@ -12,16 +12,20 @@
 			<p>
 				<span class="general-text">
 					{{#if currentUser}}
-						Hello, <span class="disguised-link" id="user-display">{{userName}}</span>!
+						{{#if isGuest}}
+							You are a guest: {{guestId}}
+						{{else}}
+							Hello, <span class="disguised-link" id="user-display">{{userName}}</span>!
+						{{/if}}
 					{{else}}
-						You are a guest.
+						Loading...
 					{{/if}}
 				</span><br>
 				<span class="sub-text">
-					{{#if currentUser}}
-						<a id="user-signout" class="common-link" href="#">Sign Out</a>
-					{{else}}
+					{{#if isGuest}}
 						Want an account? <a id="toggleSignIn" class="common-link" href="#">Sign in!</a>
+					{{else}}
+						<a id="user-signout" class="common-link" href="#">Sign Out</a>
 					{{/if}}
 				</span>
 			</p>
