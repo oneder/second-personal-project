@@ -1,4 +1,5 @@
 Meteor.startup(function () {
+	Meteor.subscribe('users');
 });
 
 function setCurrentActiveMenu() {

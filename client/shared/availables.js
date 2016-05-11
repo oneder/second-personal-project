@@ -3,7 +3,11 @@ Template.availables.onCreated(function() {
 });
 
 Template.availables.helpers({
-	rooms: function () {
+	'rooms': function () {
 		return Rooms.find({});
 	}
+});
+
+Template.availables.events({
+
 });

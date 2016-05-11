@@ -12,11 +12,16 @@ Template.createCustom.events({
 		let room = {
 			name: name,
 			capacity: cap,
+			players: [Meteor.user()._id],
 			weight: 0,
 			listeners: 0
 		};
 
-		Meteor.call('insertRoom', room);
-		Router.go('create');
+		room.weight = room.players.length;
+
+		Meteor.call('insertRoom', room, function (error, result) {
+			if(!error)
+				Router.go('/room/' + result);
+		});
 	}
 })
