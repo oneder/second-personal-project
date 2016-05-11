@@ -14,7 +14,8 @@ Template.createCustom.events({
 			capacity: cap,
 			players: [Meteor.user()._id],
 			weight: 0,
-			listeners: 0
+			listeners: 0,
+			available: true
 		};
 
 		room.weight = room.players.length;
