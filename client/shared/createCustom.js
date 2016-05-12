@@ -15,6 +15,7 @@ Template.createCustom.events({
 			players: [Meteor.user()._id],
 			weight: 0,
 			listeners: 0,
+			queue: [],
 			available: true
 		};
 

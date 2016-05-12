@@ -7,6 +7,7 @@ Template.room.rendered = function init () {
 	var interval = 30;
 
 	setInterval(function () {
+		s.handle();
 		s.draw();
 	}, interval);
 }
