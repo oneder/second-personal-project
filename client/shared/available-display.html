@@ -8,12 +8,18 @@
 				</div>
 			</fieldset>
 			<fieldset class="form-group">
-				<div class="col-xs-3 col-xs-offset-3 text-center">
-					<button type="button" class="btn btn-default btn-md btn-block" id="random-btn">Random</button>
-				</div>
-				<div class="col-xs-3 text-center">
-					<button type="button" class="btn btn-default btn-md btn-block" id="custom-btn">Create Custom</button>
-				</div>
+				{{#if isGuest}}
+					<div class="col-xs-3 col-xs-offset-2 text-center">
+						<button type="button" class="btn btn-default btn-md btn-block available-btn-font" id="random-btn">Random</button>
+					</div>
+				{{else}}
+					<div class="col-xs-3 col-xs-offset-3 text-center">
+						<button type="button" class="btn btn-default btn-md btn-block available-btn-font" id="random-btn">Random</button>
+					</div>
+					<div class="col-xs-3 text-center">
+						<button type="button" class="btn btn-default btn-md btn-block available-btn-font" id="custom-btn">Create Custom</button>
+					</div>
+				{{/if}}
 			</fieldset>
 		</form>
 	</div>

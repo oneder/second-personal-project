@@ -90,10 +90,15 @@ body {
 	overflow-y: scroll;
 }
 
-.available-name {
-
+.available-font {
+	font-size: 1.4em;
+}
+.available-btn-font {
+	font-size: 1.2em;
 }
 
-.available-capacity {
-	
+.info {
+	padding-top: 28px;
 }
+
+/* width: calc(dim-dim); */
