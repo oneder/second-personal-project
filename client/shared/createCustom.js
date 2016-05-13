@@ -14,6 +14,29 @@ Template.createCustom.events({
 			capacity: cap,
 			players: [Meteor.user()._id],
 			weight: 0,
+			tools: [
+				{
+					gain: 0,
+					frequency: 0,
+					pan: 0
+				},
+				{
+					gain: 0,
+					frequency: 0,
+					pan: 0
+				},
+				{
+					gain: 0,
+					frequency: 0,
+					pan: 0
+				},
+				{
+					gain: 0,
+					frequency: 0,
+					pan: 0
+				}
+			],
+			notify: false,
 			listeners: 0,
 			queue: [],
 			available: true

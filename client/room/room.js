@@ -7,6 +7,9 @@ Template.room.rendered = function init () {
 	var interval = 30;
 
 	setInterval(function () {
+		if((s.scontext.currentTime * 1000) % 150)
+			Meteor.call('flagTools', s.scontext.roomId);
+		
 		s.handle();
 		s.draw();
 	}, interval);
