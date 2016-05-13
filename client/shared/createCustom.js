@@ -39,6 +39,7 @@ Template.createCustom.events({
 			notify: false,
 			listeners: 0,
 			queue: [],
+			valid: true,
 			available: true
 		};
 
